@@ -1,0 +1,70 @@
+.container {
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 100%;
+  form {
+    textarea {
+      width: 90%;
+      height: 80%;
+      resize: vertical;
+      border: none;
+      background: #f3f3f3;
+      outline: none;
+      padding: 1em;
+      border-radius: 1em;
+      box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+      font-size: 1.1em;
+      font-weight: 500;
+      font-family: "Montserrat", sans-serif;
+    }
+    button {
+      outline: none;
+      border: none;
+      padding: 0.5em 1em;
+      font-size: 1.2em;
+      font-weight: 500;
+      background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+      color: #fff;
+      margin-top: 1em;
+      border-radius: 1em;
+      cursor: pointer;
+    }
+  }
+  .img-container {
+    background-image: url("/assets/Saly-22.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    height: 93%;
+    padding: 0.5em;
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      textarea {
+        width: 100%;
+      }
+    }
+    .img-container {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    padding: 0;
+    form {
+      textarea {
+        font-size: 0.9em;
+      }
+    }
+  }
+}

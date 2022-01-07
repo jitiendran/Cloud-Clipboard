@@ -1,0 +1,91 @@
+@import "../../app/shared.scss";
+
+.container {
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  header {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1em;
+    cursor: pointer;
+
+    img {
+      width: 75px;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      h4 {
+        font-size: 1.6em;
+        color: white;
+        &.black {
+          color: black;
+        }
+      }
+    }
+  }
+  .card-wrap {
+    padding: 3em 5em;
+    .card {
+      background: white;
+      border-radius: 20px;
+      height: 60vh;
+      padding: 1.5em;
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 1em;
+        a {
+          color: black;
+          font-size: 1.2em;
+          font-weight: 500;
+          text-decoration: none;
+        }
+        .active {
+          font-weight: 600;
+          text-decoration: underline;
+          text-decoration-color: #43e97b;
+          text-decoration-thickness: 2px;
+          //   background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    .card-wrap {
+      padding: 2.5em;
+      .card {
+        height: 75vh;
+        nav {
+          justify-content: center;
+          a {
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    .card-wrap {
+      padding: 1.5em;
+      .card {
+        nav {
+          a {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+}
