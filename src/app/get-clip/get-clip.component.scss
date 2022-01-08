@@ -3,79 +3,92 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   height: 100%;
-  font-family: "Montserrat", sans-serif;
-  .col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2em;
-    form {
-      width: 100%;
-      .row {
-        display: flex;
-        align-items: center;
-        gap: 0.5em;
-        input {
-          outline: none;
-          border: none;
-          padding: 0.75em;
-          width: 60%;
-          background: #f3f3f3;
-          border-radius: 0.2em;
-          font-size: 1em;
-        }
-        button {
-          outline: none;
-          border: none;
-          padding: 0.5em 1em;
-          font-size: 1.2em;
-          font-weight: 500;
-          background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
-          color: #fff;
-          border-radius: 1em;
-          cursor: pointer;
-        }
-      }
+  form {
+    textarea {
+      width: 90%;
+      height: 80%;
+      resize: vertical;
+      border: none;
+      background: #f3f3f3;
+      outline: none;
+      padding: 1em;
+      border-radius: 1em;
+      font-size: 1.1em;
+      font-weight: 500;
+      font-family: "Montserrat", sans-serif;
     }
-    img {
-      margin-top: 1em;
-      width: 200px;
-      height: 200px;
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-bottom: 2em;
+      input {
+        outline: none;
+        border: none;
+        padding: 0.75em;
+        width: 60%;
+        background: #f3f3f3;
+        border-radius: 0.2em;
+        font-size: 1em;
+      }
+      button {
+        outline: none;
+        border: none;
+        padding: 0.5em 1em;
+        font-size: 1.2em;
+        font-weight: 500;
+        background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+        color: #fff;
+        border-radius: 1em;
+        cursor: pointer;
+      }
     }
   }
   .img-container {
-    background-image: url("/assets/Saly-14.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .qr {
+      width: 320px;
+    }
+  }
+  p {
+    align-self: flex-end;
+    font-weight: 600;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    grid-template-columns: 1fr;
-    height: 93%;
-    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-top: 3em;
+    justify-content: center;
+    gap: 2em;
+    height: unset;
     form {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      .row {
-        justify-content: center;
+      width: 100%;
+      textarea {
         width: 100%;
+        height: 30vh;
       }
-    }
-
-    .img-container {
-      display: none;
+      button {
+        padding: 0.5em 2em;
+        border-radius: 2em;
+      }
     }
   }
 }
 
 @media (max-width: 425px) {
   .container {
-    padding: 0;
     form {
       textarea {
         font-size: 0.9em;

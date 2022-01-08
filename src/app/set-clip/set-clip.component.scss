@@ -13,7 +13,6 @@
       outline: none;
       padding: 1em;
       border-radius: 1em;
-      box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
       font-size: 1.1em;
       font-weight: 500;
       font-family: "Montserrat", sans-serif;
@@ -31,25 +30,44 @@
       cursor: pointer;
     }
   }
+  img {
+    width: 100%;
+  }
   .img-container {
     background-image: url("/assets/Saly-22.png");
     background-repeat: no-repeat;
     background-size: contain;
+    height: 100%;
+  }
+  p {
+    align-self: flex-end;
+    font-weight: 600;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    grid-template-columns: 1fr;
-    height: 93%;
-    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-top: 3em;
+    justify-content: center;
+    gap: 2em;
+    height: unset;
     form {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      width: 100%;
       textarea {
         width: 100%;
+        height: 30vh;
+      }
+      button {
+        padding: 0.5em 2em;
+        border-radius: 2em;
       }
     }
     .img-container {
@@ -60,7 +78,6 @@
 
 @media (max-width: 425px) {
   .container {
-    padding: 0;
     form {
       textarea {
         font-size: 0.9em;

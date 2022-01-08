@@ -29,17 +29,17 @@
     }
   }
   .card-wrap {
-    padding: 3em 5em;
+    height: 84.5%;
     .card {
       background: white;
-      border-radius: 20px;
-      height: 60vh;
-      padding: 1.5em;
+      border-radius: 50px 50px 0 0;
+      height: 100%;
+      padding: 2em;
       nav {
         display: flex;
         align-items: center;
         justify-content: end;
-        gap: 1em;
+        gap: 2em;
         a {
           color: black;
           font-size: 1.2em;
@@ -51,7 +51,6 @@
           text-decoration: underline;
           text-decoration-color: #43e97b;
           text-decoration-thickness: 2px;
-          //   background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
         }
       }
     }
@@ -60,14 +59,18 @@
 
 @media (max-width: 768px) {
   .container {
+    height: 100%;
     .card-wrap {
-      padding: 2.5em;
+      padding: 0;
       .card {
         height: 75vh;
+        border-radius: 50px 50px 0 0;
+        padding: 1.5em;
         nav {
           justify-content: center;
+          gap: 1.5em;
           a {
-            font-size: 1.1em;
+            font-size: 1.15em;
           }
         }
       }
@@ -77,14 +80,11 @@
 
 @media (max-width: 425px) {
   .container {
+    justify-content: center;
     .card-wrap {
-      padding: 1.5em;
+      margin-top: 1em;
       .card {
-        nav {
-          a {
-            font-size: 1em;
-          }
-        }
+        height: 80vh;
       }
     }
   }
