@@ -7,7 +7,8 @@
     <textarea></textarea>
   </form>
   <div class="img-container">
-    <img class="qr" src="../../assets/sample_qr.png" alt="" />
+    <img *ngIf="!data" class="qr" src="../../assets/Saly-14.png" alt="" />
+    <qrcode *ngIf="data" [qrdata]="data" [width]="320"></qrcode>
   </div>
   <p><i class="far fa-copyright"></i> {{ year }} | Cloud CLipboard Inc.</p>
 </div>

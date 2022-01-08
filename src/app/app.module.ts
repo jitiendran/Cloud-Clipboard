@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MatTabsModule } from '@angular/material/tabs';
+import { QRCodeModule } from 'angularx-qrcode';
 
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
@@ -11,12 +12,19 @@ import { SetClipComponent } from './set-clip/set-clip.component';
 import { GetClipComponent } from './get-clip/get-clip.component';
 
 @NgModule({
-  declarations: [AppComponent, IntroComponent, ClipboardComponent, SetClipComponent, GetClipComponent],
+  declarations: [
+    AppComponent,
+    IntroComponent,
+    ClipboardComponent,
+    SetClipComponent,
+    GetClipComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTabsModule,
+    QRCodeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

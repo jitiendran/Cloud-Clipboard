@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetClipComponent implements OnInit {
   year?: number;
+  data: string;
   constructor() {
     this.year = new Date().getFullYear();
+    this.data = 'Jitiendran';
   }
 
   ngOnInit(): void {}
