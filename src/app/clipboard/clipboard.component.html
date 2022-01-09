@@ -11,7 +11,7 @@
         <h4 class="black">Clipboard</h4>
       </div>
     </div>
-    <mat-icon>qr_code_scanner</mat-icon>
+    <mat-icon (click)="onScan()">qr_code_scanner</mat-icon>
   </header>
   <div class="card-wrap">
     <div class="card">
@@ -22,7 +22,7 @@
           [routerLinkActiveOptions]="{ exact: true }"
           >Set Clipboard</a
         >
-        <a routerLink="/setClipboard" routerLinkActive="active"
+        <a routerLink="/getClipboard" routerLinkActive="active"
           >Get Clipboard</a
         >
       </nav>

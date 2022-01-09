@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-clipboard',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClipboardComponent implements OnInit {
   loaded!: boolean;
-  constructor() {
+  constructor(private router: Router) {
     this.loaded = true;
   }
 
@@ -15,5 +16,9 @@ export class ClipboardComponent implements OnInit {
     setTimeout(() => {
       this.loaded = false;
     }, 4500);
+  }
+
+  onScan() {
+    this.router.navigateByUrl('/qrCodeScanner');
   }
 }
