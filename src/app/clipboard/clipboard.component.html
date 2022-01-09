@@ -1,14 +1,17 @@
 <app-intro [duration]="4" *ngIf="loaded"></app-intro>
 <div class="container" *ngIf="!loaded">
   <header>
-    <img
-      src="../../assets/cloud-clip_icon_inverse.png"
-      alt="Cloud-clipboard Icon"
-    />
     <div class="row">
-      <h4>Cloud</h4>
-      <h4 class="black">Clipboard</h4>
+      <img
+        src="../../assets/cloud-clip_icon_inverse.png"
+        alt="Cloud-clipboard Icon"
+      />
+      <div class="row">
+        <h4>Cloud</h4>
+        <h4 class="black">Clipboard</h4>
+      </div>
     </div>
+    <mat-icon>qr_code_scanner</mat-icon>
   </header>
   <div class="card-wrap">
     <div class="card">

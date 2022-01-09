@@ -34,10 +34,9 @@
     width: 100%;
   }
   .img-container {
-    background-image: url("/assets/Saly-22.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   p {
     align-self: flex-end;
@@ -69,9 +68,6 @@
         padding: 0.5em 2em;
         border-radius: 2em;
       }
-    }
-    .img-container {
-      display: none;
     }
   }
 }

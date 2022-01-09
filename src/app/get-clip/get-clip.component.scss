@@ -45,13 +45,8 @@
       }
     }
   }
-  .img-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .qr {
-      width: 320px;
-    }
+  img {
+    width: 320px;
   }
   p {
     align-self: flex-end;

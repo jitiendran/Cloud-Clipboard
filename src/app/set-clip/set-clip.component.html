@@ -1,9 +1,11 @@
 <div class="container">
-  <form action="">
-    <textarea></textarea>
-    <button>Set Clip</button>
+  <form [formGroup]="text">
+    <textarea formControlName="data"></textarea>
+    <button (click)="onSetClip()">Set Clip</button>
   </form>
-  <!-- <div class="img-container"></div> -->
-  <img src="../../assets/Saly-22.png" alt="" />
+  <div class="img-container">
+    <qrcode *ngIf="data !== ''" [qrdata]="data" [width]="320"></qrcode>
+    <img *ngIf="data === ''" src="../../assets/Saly-22.png" alt="" />
+  </div>
   <p><i class="far fa-copyright"></i> {{ year }} | Cloud CLipboard Inc.</p>
 </div>

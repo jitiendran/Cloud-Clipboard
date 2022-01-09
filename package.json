@@ -20,6 +20,7 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
+    "angular2-qrscanner": "^1.0.7",
     "angularx-qrcode": "^13.0.2",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
