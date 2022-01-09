@@ -6,6 +6,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { QRCodeModule } from 'angularx-qrcode';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgQrScannerModule } from 'angular2-qrscanner';
+import { BarcodeScannerLivestreamModule } from 'ngx-barcode-scanner';
+import { ClipboardModule } from 'ngx-clipboard';
+import { NgxCopyToClipboardModule } from 'ngx-copy-to-clipboard';
 
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
@@ -32,6 +35,9 @@ import { CloudScannerComponent } from './cloud-scanner/cloud-scanner.component';
     MatIconModule,
     QRCodeModule,
     NgQrScannerModule,
+    BarcodeScannerLivestreamModule,
+    ClipboardModule,
+    NgxCopyToClipboardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

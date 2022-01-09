@@ -1,3 +1,5 @@
+<textarea [value]="data"></textarea>
+<button (click)="copyClipboard()">Copy</button>
 <div class="container">
   <qr-scanner
     [debug]="false"
@@ -8,3 +10,12 @@
   >
   </qr-scanner>
 </div>
+
+<!-- <barcode-scanner-livestream
+  type="code_128"
+  (valueChanges)="onValueChanges($event)"
+  (started)="(onStarted)"
+></barcode-scanner-livestream>
+<div [hidden]="!barcodeValue">
+  {{ barcodeValue }}
+</div> -->

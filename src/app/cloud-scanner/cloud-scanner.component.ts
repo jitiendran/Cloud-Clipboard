@@ -1,11 +1,7 @@
-import {
-  AfterViewInit,
-  Component,
-  OnInit,
-  ViewChild,
-  ViewEncapsulation,
-} from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { QrScannerComponent } from 'angular2-qrscanner';
+import { ClipboardService } from 'ngx-clipboard';
+import { NgxCopyToClipboardComponent } from 'ngx-copy-to-clipboard';
 
 @Component({
   selector: 'app-cloud-scanner',
@@ -13,12 +9,15 @@ import { QrScannerComponent } from 'angular2-qrscanner';
   styleUrls: ['./cloud-scanner.component.scss'],
 })
 export class CloudScannerComponent implements OnInit, AfterViewInit {
-  constructor() {}
+  constructor(private clipboard: ClipboardService) {}
 
   @ViewChild(QrScannerComponent, { static: false })
   qrScannerComponent: QrScannerComponent;
+  data: string;
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.data = '';
+  }
 
   ngAfterViewInit(): void {
     this.qrScannerComponent.getMediaDevices().then((devices) => {
@@ -47,6 +46,12 @@ export class CloudScannerComponent implements OnInit, AfterViewInit {
 
     this.qrScannerComponent.capturedQr.subscribe((result) => {
       console.log(result);
+      this.data = result;
     });
+  }
+
+  copyClipboard() {
+    // console.log(data);
+    this.clipboard.copyFromContent(this.data);
   }
 }
