@@ -9,6 +9,7 @@ import { NgQrScannerModule } from 'angular2-qrscanner';
 import { BarcodeScannerLivestreamModule } from 'ngx-barcode-scanner';
 import { ClipboardModule } from 'ngx-clipboard';
 import { NgxCopyToClipboardModule } from 'ngx-copy-to-clipboard';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
@@ -31,6 +32,7 @@ import { CloudScannerComponent } from './cloud-scanner/cloud-scanner.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MatIconModule,
     QRCodeModule,

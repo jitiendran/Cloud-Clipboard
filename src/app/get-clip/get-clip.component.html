@@ -1,11 +1,16 @@
 <div class="container">
-  <form action="">
+  <form [formGroup]="text">
     <div class="row">
-      <input type="text" placeholder="type id here" />
-      <button>Get Clip</button>
+      <input type="number" formControlName="cid" placeholder="type id here" />
+      <button (click)="this.onGetClip()">Get Clip</button>
     </div>
-    <textarea></textarea>
+    <textarea [value]="this.data"></textarea>
   </form>
   <img src="../../assets/Saly-14.png" alt="" />
   <p><i class="far fa-copyright"></i> {{ year }} | Cloud CLipboard Inc.</p>
+</div>
+
+
+<div class="loader-wrap" *ngIf="this.loading">
+    <img src="../../assets/loader.svg" alt="loader">
 </div>

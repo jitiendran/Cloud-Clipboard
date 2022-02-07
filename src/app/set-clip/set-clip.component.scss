@@ -44,6 +44,87 @@
   }
 }
 
+.popup-wrap {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    .popup {
+        width: max(50%,500px);
+        height: 40%;
+        padding: 1em;
+        border-radius: 15px;
+        background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+        button {
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 1.3em;
+            font-weight: 700;
+            float: right;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .content-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+            height: 100%;
+            .img {
+                height: 100%;
+                background: url('/assets/congratulation.jpg') no-repeat center center;
+                border-radius: 15px;
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1em;
+
+                .row {
+                    display: flex;
+                    align-items: center;
+                    input[type='text'] {
+                        background: none;
+                        border: 2px solid white;
+                        outline: none;
+                        padding: 0.3em .4em;
+                        font-size: 1.2em;
+                        border-radius: 1em 0 0 1em;
+                        color: white;
+                    }
+                    button {
+                        background: white;
+                        height: 100%;
+                        color: #00000085;
+                        padding: 0.3em;
+                        border-radius: 0 1em 1em 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.loader-wrap {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
 @media (max-width: 768px) {
   .container {
     display: flex;
@@ -70,6 +151,17 @@
       }
     }
   }
+  .popup-wrap {
+      .popup {
+          .content-wrap {
+              grid-template-columns: unset;
+              grid-template-rows: 1fr 1fr;
+              gap: unset;
+              margin-top: 2em;
+              height: calc(100% - 2em);
+            }
+        }
+    }
 }
 
 @media (max-width: 425px) {
