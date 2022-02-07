@@ -1,11 +1,31 @@
 <div class="container">
   <form [formGroup]="text">
-    <textarea formControlName="data"></textarea>
+    <textarea formControlName="content"></textarea>
     <button (click)="onSetClip()">Set Clip</button>
   </form>
   <div class="img-container">
-    <qrcode *ngIf="data !== ''" [qrdata]="data" [width]="320"></qrcode>
-    <img *ngIf="data === ''" src="../../assets/Saly-22.png" alt="" />
+    <qrcode *ngIf="this.data" [qrdata]="this.qrData" [width]="320"></qrcode>
+    <img *ngIf="!this.data" src="../../assets/Saly-22.png" alt="" />
   </div>
   <p><i class="far fa-copyright"></i> {{ year }} | Cloud CLipboard Inc.</p>
+</div>
+
+<div class="popup-wrap" *ngIf="this.bringPopup">
+    <div class="popup">
+        <button (click)="this.bringPopup = false"><i class="far fa-times-circle"></i></button>
+        <div class="content-wrap">
+            <div class="img"></div>
+            <div class="content">
+                <h3>Content Is Set Successfully !</h3>
+                <div class="row">
+                    <input type="text" [value]="this.cid" readonly>
+                    <button (click)="this.copyId()"><i class="fas fa-copy"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="loader-wrap" *ngIf="this.loading">
+    <img src="../../assets/loader.svg" alt="loader">
 </div>
